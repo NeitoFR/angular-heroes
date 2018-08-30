@@ -14,6 +14,7 @@ export class HeroesComponent implements OnInit {
   selectedHero: Hero;
 
   onSelect(hero: Hero): void {
+    this.heroService.add('Details about '+hero.name+' ('+hero.id+') requested');
     this.selectedHero = hero;
   }
   constructor(private heroService: HeroService) { }

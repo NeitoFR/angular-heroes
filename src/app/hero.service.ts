@@ -14,7 +14,9 @@ export class HeroService {
     this.messageService.add('HeroService : fetched heroes');
     return of(HEROES);
   }
-
+  add(message: string): void {
+    this.messageService.add(message);
+  }
   constructor(private messageService : MessageService) { }
 
 }
